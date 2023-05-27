@@ -1,3 +1,4 @@
+import { Button } from 'antd';
 export function AnotherUserParticipation(props){
-    return <button onClick={props.addAnother}>Another User</button>
+    return <Button onClick={props.addAnother}>Another User</Button>
 }
