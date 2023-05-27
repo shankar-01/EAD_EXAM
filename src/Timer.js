@@ -13,11 +13,11 @@ export function Timer(props){
             return count-1
         })
     }
-    useEffect(async ()=>{
-        const id = await setInterval(handleTime, 1000)
+    useEffect(()=>{
+        const id = setInterval(handleTime, 1000)
         console.log(id)
         setTimerId(id)
     }, [])
 
-    return <span>{count}</span>
+    return <span>{count!=0?count:"Time Out"}</span>
 }
