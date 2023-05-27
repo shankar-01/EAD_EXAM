@@ -1,10 +1,11 @@
 export function PolllDisplay(props){
     
     return (<>
-    <h2>{props.question}</h2>
+    <h2>Poll Question:{props.question}</h2>
+    <h3>Answer Choices with Vote Counts:</h3>
     {props.choices&&props.choices.map(obj=>{
         return <>
-            <label><input type="radio" value={obj.label} onClick={()=>{props.handleSelect(obj.id)}}/> {obj.label}</label><br/>
+            <p>{obj.label} : {obj.votes} votes</p>
         </>
     })}
     </>)
